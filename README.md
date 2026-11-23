@@ -1,5 +1,6 @@
 # Event Ticketing and Booking: Course Capstone
 
+
 **Organizers publish events. Attendees buy tickets. Staff check people in with QR codes.**
 
 You will build a full-stack ticketing platform over nine weekly Build sessions, using an AI coding tool as your partner. The app looks simple on the surface. It hides three hard problems, and solving them well is what this project is about.
@@ -177,5 +178,6 @@ npm run oversell   # 50 people try to book the last seat at the same moment
 `npm run oversell` runs the race twice. The Build 4 way (read the tier, check in JavaScript, then save) lets all 50 bookings through. The Build 5 way takes the seats with one atomic statement, `UPDATE ticket_tiers SET sold = sold + ? WHERE id = ? AND sold + ? <= capacity`, and only the request that changed a row gets the seat: 1 succeeds, 49 get `SOLD_OUT`. `test/oversell.test.js` proves it, and fails if the fix is removed.
 
 The server's database lives in `data/ticketing.db` (set `DATABASE_PATH` to use another file). Delete the `data/` folder to start again. The schema, with its PRIMARY KEY, FOREIGN KEY, UNIQUE and CHECK constraints, is in `src/db/schema.sql`.
-#   c a p s t o n e - E v e n t - B o o k i n g - S y s t e m  
+#   c a p s t o n e - E v e n t - B o o k i n g - S y s t e m 
+ 
  
